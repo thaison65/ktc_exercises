@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/scss/css/index.css" />
+
+    <title>KTC F&B</title>
+  </head>
+  <body>
+    <main id="root">
+      <header>
+        <h1>KTC F&B</h1>
+        <h2>Drink Menu</h2>
+        <img class="tree-image tree-1" src="./src/assets/images/treeImage.png" alt="" />
+        <img class="tree-image tree-2" src="./src/assets/images/treeImage.png" alt="" />
+      </header>
+      <section class="container-search">
+        <div class="filter-category">
+          <h3>Filter by Category</h3>
+          <ul id="filter-container"></ul>
+        </div>
+        <div class="search-bar">
+          <label for="txt-search">Search by drink</label>
+          <div class="search">
+            <input placeholder="Search drink..." id="txt-search" type="text" />
+            <button type="button" id="btn-search">Search</button>
+          </div>
+        </div>
+
+        <article class="container-icon-shopping">
+          <div id="badge"></div>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 256 256">
+            <path
+              fill="#13a026"
+              d="M228.61 60.16A6 6 0 0 0 224 58H61l-6.37-35.07a6 6 0 0 0-5.9-4.93H24a6 6 0 0 0 0 12h19.72l25.81 141.94a21.93 21.93 0 0 0 6.24 11.77a26 26 0 1 0 38.12 6.29h52.22A26 26 0 1 0 188 178H91.17a10 10 0 0 1-9.84-8.21L77.73 150H196.1a22 22 0 0 0 21.65-18.06l12.15-66.87a6 6 0 0 0-1.29-4.91M106 204a14 14 0 1 1-14-14a14 14 0 0 1 14 14m96 0a14 14 0 1 1-14-14a14 14 0 0 1 14 14m3.94-74.21a10 10 0 0 1-9.84 8.21H75.55L63.19 70h153.62Z" />
+          </svg>
+        </article>
+
+        <div id="shopping">
+          <h3>Shopping Cart</h3>
+          <ul id="cart-container">
+            <!-- Add drink menu items here -->
+          </ul>
+          <div class="total-price">
+            <p>Quality: <span id="quality"></span></p>
+            <p>Total Price: <span id="total-price"></span></p>
+          </div>
+          <button type="button" id="btn-checkout">Submit</button>
+          <button type="button" id="btn-clear-cart">Clear Cart</button>
+        </div>
+      </section>
+
+      <section id="content">
+        <!-- Add more drink menu items here -->
+      </section>
+
+      <img class="tree-image tree-3" src="./src/assets/images/treeImage.png" alt="" />
+      <img class="tree-image tree-4" src="./src/assets/images/treeImage.png" alt="" />
+
+      <footer>
+        <p>�� 2024 KTC F&B. All rights reserved.</p>
+      </footer>
+
+      <script src="./src/js/index.js" type="module"></script>
+    </main>
+  </body>
+</html>

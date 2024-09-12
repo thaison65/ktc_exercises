@@ -1,0 +1,17 @@
+*.zip
+*.rar
+.DS_Store
+template*
+
+# ignore sub git dir
+.vscode
+f_news
+ktc-fe-basic
+
+# ignore build and cach dir
+.next
+.dir
+.dist*
+
+# ignore node_modules
+node_modules

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="./src/css/style.css" />
+
+    <title>Exercise 28</title>
+  </head>
+  <body>
+    <div id="container">
+      <aside>
+        <h2>Add New Item</h2>
+        <form>
+          <div class="transform"></div>
+
+          <div class="textfield">
+            <label for="name">Name</label>
+            <input class="input-style" type="text" id="name" name="name" placeholder="Enter the name of the hotel" />
+          </div>
+          <div class="textfield">
+            <label for="name">Phone</label>
+            <input class="input-style" type="phone" id="phone" name="phone" placeholder="Enter phone number of hotel" />
+          </div>
+          <div class="textfield">
+            <label for="name">Price</label>
+            <input class="input-style" type="text" id="price" name="price" placeholder="Enter price of hotel" />
+          </div>
+          <div class="textfield">
+            <label for="name">Address</label>
+            <input class="input-style" type="text" id="address" name="address" placeholder="Enter address of hotel" />
+          </div>
+          <div class="textfield">
+            <label for="name">Description</label>
+            <input class="input-style" type="text" id="description" name="description" placeholder="Enter description" />
+          </div>
+          <div class="btn-container">
+            <button id="btn-submit" type="submit">Submit</button>
+          </div>
+        </form>
+      </aside>
+      <div id="content">
+        <h2>List: <span id="number_product">100 items</span></h2>
+      </div>
+    </div>
+
+    <script defer src="./index.js" type="module"></script>
+  </body>
+</html>

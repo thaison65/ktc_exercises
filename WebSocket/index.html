@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>WebSocket Test</h2>
+    <div id="output"></div>
+
+    <script>
+      const wsUri = 'ws://192.168.18.12:8080';
+      const output = document.querySelector('#output');
+      const websocket = new WebSocket(wsUri);
+      let pingInterval;
+
+      function writeToScreen(message) {
+        output.insertAdjacentHTML('afterbegin', `<p>${message}</p>`);
+      }
+
+      function sendMessage(message) {
+        writeToScreen(`SENT: ${message}`);
+        websocket.send(message);
+      }
+
+      websocket.onopen = (e) => {
+        writeToScreen('CONNECTED');
+        sendMessage('Heelo NÈ');
+        pingInterval = setInterval(() => {
+          sendMessage('Anh Lĩnh (VNG)');
+        }, 2000);
+      };
+
+      websocket.onclose = (e) => {
+        writeToScreen('DISCONNECTED');
+        clearInterval(pingInterval);
+      };
+
+      websocket.onmessage = (e) => {
+        writeToScreen(`RECEIVED: ${e.data}`);
+      };
+
+      websocket.onerror = (e) => {
+        writeToScreen(`ERROR: ${e.data}`);
+      };
+    </script>
+  </body>
+</html>

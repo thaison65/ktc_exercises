@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- [Delete this comment] This file is the main file for the challenge. For the most part, you should be editing this file. -->
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Hero Section | GreatFrontEnd Projects</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Tailwind CDN allows you to use Tailwind classes immediately in your HTML without any installation steps. 
+      If you're not using Tailwind, you may delete the <script> -->
+    <!-- Get started on Tailwind: https://tailwindcss.com/docs/installation/play-cdn -->
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" href="img/favicon.ico" sizes="any" />
+
+    <script>
+      tailwind.config = {
+        theme: {
+          screens: {
+            sm: '375px',
+            md: '768px',
+            xl: '1280px',
+          },
+
+          fontFamily: {
+            sans: ['Noto Sans', 'Arial', 'sans-serif'],
+          },
+
+          maxWidth: {
+            360: '1440px',
+            150: '1150px',
+          },
+          extend: {},
+        },
+        plugins: [],
+      };
+    </script>
+  </head>
+  <body>
+    <div id="container" class="h-full container max-w-7xl mx-auto flex flex-col items-center justify-center my-10">
+      <header class="flex flex-col gap-4 items-center w-150">
+        <span class="text-indigo-700 font-semibold text-2xl sm:text-xl">Pricing Tiers</span>
+        <h1 class="font-semibold text-6xl sm:text-4xl">Fit for all your needs</h1>
+        <p class="text-neutral-600 text-2xl sm:text-xl text-center">
+          Pick the plan that suits you today and step up as your demands grow - our flexible options have your journey mapped out.
+        </p>
+      </header>
+
+      <main id="root">
+        <div id="tabs" class="flex justify-center gap-12 my-10">
+          <button
+            id="btn-monthly"
+            class="border-2 shadow-md text-lg rounded-md text-black px-12 py-3 hover:-translate-y-1 active:translate-y-0 transition-transform">
+            Monthly
+          </button>
+          <button
+            id="btn-annually"
+            class="border-none hover:shadow-md text-lg rounded-md text-neutral-500 hover:text-black px-12 py-3 hover:-translate-y-1 active:translate-y-0 transition-transform">
+            Annually
+          </button>
+        </div>
+        <div id="content" class="flex flex-wrap gap-8 xl:flex-row md:flex-col sm:flex-col">
+          <section class="item flex flex-1 flex-col gap-12 rounded-md border-2 p-8 hover:-translate-y-1 active:translate-y-0 transition-transform">
+            <header class="flex flex-col gap-1">
+              <h2 class="text-2xl font-semibold">Basic Plan</h2>
+              <p class="text-neutral-600 text-lg">Access to a curated selection of abstract images</p>
+            </header>
+            <div class="price-container">
+              <span class="flex items-end">
+                <h1 class="price text-6xl font-semibold">$9.99</h1>
+                <span class="text-lg">/ month</span>
+              </span>
+              <p class="text-neutral-600 text-lg">Billed <span class="text-discount">monthly</span></p>
+            </div>
+
+            <div class="sup-container flex flex-1 flex-col gap-6">
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Standard quality images</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Limited to personal use</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Email support</p>
+              </div>
+            </div>
+
+            <button class="border-2 rounded-md shadow-md hover:bg-indigo-800 text-lg hover:text-white py-2">Buy now</button>
+          </section>
+
+          <section
+            class="item flex flex-1 flex-col gap-12 rounded-md p-8 border-2 shadow-md hover:-translate-y-1 active:translate-y-0 transition-transform">
+            <h2 id="title-most" class="text-xl font-semibold text-indigo-800 bg-indigo-100 text-center py-4">Most Popular</h2>
+
+            <header class="flex flex-col gap-1">
+              <h2 class="text-2xl font-semibold">Standard Plan</h2>
+              <p class="text-neutral-600 text-lg">Next-level Integrations, priced economically</p>
+            </header>
+            <div class="price-container">
+              <span class="flex items-end">
+                <h1 class="price text-6xl font-semibold">$19.99</h1>
+                <span class="text-lg">/ month</span>
+              </span>
+              <p class="text-neutral-600 text-lg">Billed <span class="text-discount">monthly</span></p>
+            </div>
+
+            <div class="sup-container flex flex-1 flex-col gap-6">
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Expanded library with more diverse abstract images</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">High-resolution images available</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Suitable for commercial use</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Priority email support</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Advanced analytics</p>
+              </div>
+            </div>
+            <button class="border-2 rounded-md shadow-md hover:bg-indigo-800 text-lg hover:text-white py-2">Buy now</button>
+          </section>
+
+          <section class="item flex flex-1 flex-col gap-12 rounded-md border-2 p-8 hover:-translate-y-1 active:translate-y-0 transition-transform">
+            <header class="flex flex-col gap-1">
+              <h2 class="text-2xl font-semibold">Basic Plan</h2>
+              <p class="text-neutral-600 text-lg">Access to a curated selection of abstract images</p>
+            </header>
+            <div class="price-container">
+              <span class="flex items-end">
+                <h1 class="price text-6xl font-semibold">$29.99</h1>
+                <span class="text-lg">/ month</span>
+              </span>
+              <p class="text-neutral-600 text-lg">Billed <span class="text-discount">monthly</span></p>
+            </div>
+
+            <div class="sup-container flex flex-1 flex-col gap-6">
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Full access to the entire image library, including exclusive content</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Highest quality images, including premium collections</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Commercial and resale rights</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Dedicated customer support line</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">24/7 support response time</p>
+              </div>
+
+              <div class="check-supp flex gap-4 items-center">
+                <div class="icon-container rounded-full bg-indigo-50">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path fill="#3730a3" d="M9 16.17L4.83 12l-1.42 1.41L9 19L21 7l-1.41-1.41z" />
+                  </svg>
+                </div>
+                <p class="text-neutral-600 text-lg">Advanced analytics and insights</p>
+              </div>
+            </div>
+
+            <button class="border-2 rounded-md shadow-md hover:bg-indigo-800 text-lg hover:text-white py-2">Buy now</button>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <script defer src="js/index.js" type="module"></script>
+  </body>
+</html>
